@@ -1,0 +1,60 @@
+super + Return
+	$TERMINAL
+
+super + c
+	$TERMINAL -e numbat
+
+super + f
+  $TERMINAL -e nnn -Rr
+
+super + ctrl + f
+  $TERMINAL -e tmux \
+      new-session  "nnn -Rr"
+
+super + v
+	$TERMINAL -e nvim
+
+super + w
+	$BROWSER
+
+super + p
+	dmenu_run
+
+super + x
+  xkill
+
+Print
+	maim -u -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+
+ctrl + Print
+	maim -s | xclip -selection clipboard -t image/png
+
+super + shift + p
+	mpv $(xclip -o)
+
+super + y
+	clipmenu
+
+super + ctrl + shift + BackSpace
+	$HOME/script/exit.sh
+
+super + {equal, minus, BackSpace}
+	$HOME/script/volum.sh {inc, dec, toggle}
+
+super + shift + {equal, minus, BackSpace}
+	$HOME/script/changeTemp.sh {inc, dec, reset}
+
+super + i
+	$HOME/script/viewImage.sh
+
+super + o
+	$HOME/script/todo.sh
+
+super + s
+	$HOME/script/dmenu_websearch.sh
+
+super + t
+	$HOME/script/dmenu-translate.sh
+
+super + r
+  setxkbmap -layout us,ara -variant ,digits -option altwin:swap_alt_win -option grp:alt_caps_toggle caps:escape
