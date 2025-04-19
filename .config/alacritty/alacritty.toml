@@ -1,0 +1,32 @@
+[general]
+import = ["/home/alinajib/.config/alacritty/dracula.toml"]
+
+[font]
+size = 10.0
+
+bold = {family= "JetBrainsMonoNerdFont", style= "Bold"}
+
+bold_italic = {family= "JetBrainsMonoNerdFont", style= "Bold Italic"}
+
+italic = {family= "JetBrainsMonoNerdFont", style= "Italic"}
+
+normal = {family= "JetBrainsMonoNerdFont", style= "Regular"}
+
+[keyboard]
+bindings = [
+  # Copy/Paste
+  { key = "Y", mods = "Control|Shift", action = "Copy" },
+  { key = "V", mods = "Control|Shift", action = "PasteSelection" },
+  { key = "P", mods = "Control|Shift", action = "Paste"},
+
+  # Scrolling
+  { key = "K", mods = "Control|Shift", action = "ScrollLineUp" },
+  { key = "J", mods = "Control|Shift", action = "ScrollLineDown" },
+  { key = "U", mods = "Control|Shift", action = "ScrollHalfPageUp" },
+  { key = "D", mods = "Control|Shift", action = "ScrollHalfPageDown" },
+]
+
+[terminal]
+
+[terminal.shell]
+  program= "/usr/bin/fish"
